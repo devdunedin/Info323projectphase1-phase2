@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="CustomersModule">
+   <head>
+
+      <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+      <script src="scripts/angular.min.js"></script>
+      <script src="scripts/angular-resource.min.js"></script>
+
+      <script src="scripts/customers.js"></script>
+
+   </head>
+
+   <body>
+      
+
+      <div id="content" ng-controller="CustomerController">
+
+         <h1>Manage Customer Sunsigns</h1>
+
+         <form action="#">
+
+<!--            <fieldset>
+
+               <legend>Customer IDs</legend>
+
+               <select ng-model="customer.id" ng-options="id for id in CustomerIDs" ng-click="displaySelectedProduct()" size="5" class="fullwidth">
+                  <option value="">-- Select a customer to view sunsign--</option>
+               </select>
+
+            </fieldset>-->
+
+            <fieldset>
+
+               <legend>Customer Details</legend>
+
+               <label>ID:<input type="text" ng-model="id"></label>
+               <label>Name:<input type="text" ng-model="name"></label>
+               <label>Date Of Birth:<input type="text" ng-model="dob"></label>
+               <label>Month of Birth:<input type="text" ng-model="month"></label>
+               <label>Gender:<input type="text" ng-model="gender"></label>
+               
+               <div class="buttongroup">
+                  <button type="reset" ng-click="getSign()" class="fullwidth">Get Sign</button>
+               </div>
+               
+            </fieldset>
+
+<!--            <fieldset>
+
+               <legend>SunSign</legend>
+
+               <select ng-model="item.productName" ng-options="(item.productName +' (x'+ item.quantityToBuy+')') for item in shoppingCart.items" size="5" class="fullwidth">
+                  <option value="">-- Sunsign Details --</option>
+               </select>
+
+               <div class="buttongroup">
+                  <button type="button" ng-click="checkout()" class="fullwidth">Checkout</button>
+               </div>
+
+            </fieldset>-->
+
+
+         </form>
+
+         <br />
+         
+          <!--<script language="javascript" type="text/javascript">
+      
+         if (!window.WebSocket) {
+            alert("WebSockets are not supported by this browser");
+         } else { 
+            initializeSocket(); 
+         }
+         
+         function initializeSocket() {
+            var uri = "ws://localhost:9001/sign";
+            
+            ws = new WebSocket(uri);
+            ws.onmessage = function(event) {
+            var messages = document.getElementById("ID");
+                    
+            alert(document.getElementById("ID"));
+            }
+         
+         }
+         
+      </script>-->
+
+         <div id="messages">{{messages}}</div>
+
+      </div>
+
+   </body>
+</html>

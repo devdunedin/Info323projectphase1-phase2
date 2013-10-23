@@ -1,0 +1,85 @@
+@import url("forms.css");  /* import forms layout */
+
+body {
+/*   background: rgb(60,60,60);*/
+  
+
+background-image:url('image1.jpg');
+background-repeat:no-repeat;
+ 
+
+   font-family: Georgia,'Times New Roman',times,serif;
+   font-size: 12pt;
+}
+
+h1 {
+   background: orangered;
+   color: white;
+   padding: 5px;
+   margin-left:-20px;
+   margin-right:-20px;
+   text-align: center;
+}
+
+#content {
+   border:thick;
+   border-style:double;
+   border-color:black;
+   border-radius: 25px 25px 25px 25px;         /* CSS3 */
+   -moz-border-radius: 25px 25px 25px 25px;    /* Firefox */
+   -webkit-border-radius: 25px 25px 25px 25px; /* Webkit (Safari, Chrome) */
+   -moz-box-shadow: 5px 5px 15px #000;
+   -webkit-box-shadow: 5px 5px 15px #000;
+   box-shadow: 5px 5px 15px #000;
+/*   background:rgb(210,210,210);*/
+   background:orange; 
+   margin-left:auto;
+   margin-right:auto;
+   margin-top:50px;
+   margin-bottom: auto;
+   padding: 20px;
+   width:80%;
+   max-width:750px;
+   background-image:url('image2.jpg');
+background-repeat:no-repeat;
+background-position:left ;
+  
+}
+
+
+/* fieldset fonts/colors/margins */
+
+fieldset {
+   border-color:silver;
+   background:orangered;
+  
+   margin:auto;
+   
+   font-weight: normal;
+}
+
+fieldset legend {
+   color:black;
+   font-weight:bold;
+}
+
+/* make input components change color when focused */
+
+input[type="text"]:hover, textarea:hover, select:hover, input[type="password"]:hover, button:hover,
+input[type="text"]:focus, textarea:focus, select:focus, input[type="password"]:focus, button:focus {
+   background-color:#ffff99;
+   border-color:#999999;
+}
+
+
+/* class for things that should fill their containers */
+.fullwidth {
+   width:100%;
+}
+
+
+/* overide some widths */
+
+fieldset input[type=text] {
+   width:175px;
+}

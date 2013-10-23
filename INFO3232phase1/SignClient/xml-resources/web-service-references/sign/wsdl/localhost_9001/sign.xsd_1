@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.4-b01. --><xs:schema xmlns:tns="http://sign/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://sign/">
+
+<xs:element name="signCalculator" type="tns:signCalculator"></xs:element>
+
+<xs:element name="signCalculatorResponse" type="tns:signCalculatorResponse"></xs:element>
+
+<xs:complexType name="signCalculator">
+<xs:sequence>
+<xs:element name="dob" type="xs:int"></xs:element>
+<xs:element name="month" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="gender" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signCalculatorResponse">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
