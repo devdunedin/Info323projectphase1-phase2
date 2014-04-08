@@ -175,3 +175,83 @@ See test case 3 on the template for test data.
   </wsdl:port>
   </wsdl:service>
   </wsdl:definitions>
+
+
+
+
+
+
+
+
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="EISCashieringServiceImplService" targetNamespace="http://impl.services.cashering.integration.ami.exigen.com/" xmlns:ns1="http://www.exigenservices.com/ipb/cashiering" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.services.cashering.integration.ami.exigen.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="http://w8dvexijv01.ldstatdv.net:8280/ami-admin/services/cashiering?wsdl=EISCashieringServicePort.wsdl" namespace="http://www.exigenservices.com/ipb/cashiering">
+    </wsdl:import>
+  <wsdl:binding name="EISCashieringServiceImplServiceSoapBinding" type="ns1:EISCashieringServicePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getClaimDetails">
+      <soap:operation soapAction="http://exigenservices.com/ipb/cashiering/getClaimDetails" style="document"/>
+      <wsdl:input name="getClaimDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getClaimDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericExceptionMsg">
+        <soap:fault name="GenericExceptionMsg" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transferFundsToPolicy">
+      <soap:operation soapAction="http://exigenservices.com/ipb/cashiering/transferFundsToPolicy" style="document"/>
+      <wsdl:input name="transferFundsToPolicy">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transferFundsToPolicyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericExceptionMsg">
+        <soap:fault name="GenericExceptionMsg" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transferFundsToClaim">
+      <soap:operation soapAction="http://exigenservices.com/ipb/cashiering/transferFundsToClaim" style="document"/>
+      <wsdl:input name="transferFundsToClaim">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transferFundsToClaimResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericExceptionMsg">
+        <soap:fault name="GenericExceptionMsg" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAmountOwedPerPolicy">
+      <soap:operation soapAction="http://exigenservices.com/ipb/cashiering/getAmountOwedPerPolicy" style="document"/>
+      <wsdl:input name="getAmountOwedPerPolicy">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAmountOwedPerPolicyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericExceptionMsg">
+        <soap:fault name="GenericExceptionMsg" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transferFundsBetweenPolicies">
+      <soap:operation soapAction="http://exigenservices.com/ipb/cashiering/transferFundsBetweenPolicies" style="document"/>
+      <wsdl:input name="transferFundsBetweenPolicies">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transferFundsBetweenPoliciesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericExceptionMsg">
+        <soap:fault name="GenericExceptionMsg" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EISCashieringServiceImplService">
+    <wsdl:port binding="tns:EISCashieringServiceImplServiceSoapBinding" name="EISCashieringServiceImplPort">
+      <soap:address location="http://w8dvexijv01.ldstatdv.net:8280/ami-admin/services/cashiering"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
